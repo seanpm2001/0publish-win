@@ -115,11 +115,6 @@ Kopie tego programu można rozprowadzać zgodnie z warunkami licencji GNU Lesser
     <value>Dodaj blok podpisu XML. (Wszystkie zdalne kanały muszą być podpisane)</value>
     <comment>Automatically translated.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Nieznany tryb pracy.
-Spróbuj {0}</value>
-    <comment>Automatically translated.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>Zastosowanie:</value>
     <comment>Automatically translated.</comment>

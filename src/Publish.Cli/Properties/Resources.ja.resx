@@ -115,11 +115,6 @@
     <value>XML署名ブロックを追加します。(すべてのリモートフィードには署名が必要です)。</value>
     <comment>Automatically translated.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>動作モードが不明です。
-試す{0}</value>
-    <comment>Automatically translated.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>使用方法</value>
     <comment>Automatically translated.</comment>

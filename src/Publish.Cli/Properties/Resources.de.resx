@@ -87,6 +87,10 @@ Sie dürfen unter den Bedingungen der GNU Lesser General Public License Kopien d
     <value>Alle angegebenen Feeds in einer einzelnen Katalog {DATEI} kombinieren.</value>
     <comment>Manually overriden.</comment>
   </data>
+  <data name="OptionCreate" xml:space="preserve">
+    <value>Feed-Datei erstellen, falls nicht vorhanden.</value>
+    <comment>Manually overriden.</comment>
+  </data>
   <data name="OptionGnuPGPassphrase" xml:space="preserve">
     <value>Verwende {PASS} um den privaten GnuPG Schlüssel freizuschalten.</value>
     <comment>Manually overriden.</comment>
@@ -113,11 +117,6 @@ Sie dürfen unter den Bedingungen der GNU Lesser General Public License Kopien d
   </data>
   <data name="OptionXmlSign" xml:space="preserve">
     <value>Füge einen XML Signaturblock hinzu. (Alle Remote-Feeds müssen signiert sein.)</value>
-    <comment>Manually overriden.</comment>
-  </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Unbekannter Betriebsmodus.
-Probieren Sie {0}</value>
     <comment>Manually overriden.</comment>
   </data>
   <data name="Usage" xml:space="preserve">

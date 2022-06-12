@@ -115,11 +115,6 @@
     <value>Προσθήκη μπλοκ υπογραφής XML. (Όλες οι απομακρυσμένες τροφοδοσίες πρέπει να υπογράφονται.)</value>
     <comment>Manually overriden.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Άγνωστος τυπος λειτουργίας
-Δοκιμάστε {0}</value>
-    <comment>Manually overriden.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>Χρήση:</value>
     <comment>Manually overriden.</comment>

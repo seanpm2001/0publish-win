@@ -115,11 +115,6 @@
     <value>添加一个XML签名块。(所有的远程馈送都必须签名)。</value>
     <comment>Automatically translated.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>操作模式不明。
-尝试{0}</value>
-    <comment>Automatically translated.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>使用方法。</value>
     <comment>Automatically translated.</comment>

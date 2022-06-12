@@ -115,11 +115,6 @@ Bu yazılımın kopyaları GNU Kısıtlı Genel Kamu Lisansı koşullarına bağ
     <value>Bir XML imza kalıbı ekleyin (Tüm uzak akışların imzalanmış olması gerekmektedir).</value>
     <comment>Manually overriden.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>İşlem kipi bilinmiyor.
-{0} deneyin</value>
-    <comment>Manually overriden.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>Kullanım:</value>
     <comment>Manually overriden.</comment>

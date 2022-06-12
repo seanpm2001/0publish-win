@@ -115,11 +115,6 @@
     <value>Aggiungere un blocco di firma XML. (Tutti i feed remoti devono essere firmati)</value>
     <comment>Automatically translated.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Modalità di funzionamento sconosciuta.
-Prova {0}</value>
-    <comment>Automatically translated.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>Utilizzo:</value>
     <comment>Automatically translated.</comment>

@@ -115,11 +115,6 @@ Puteți redistribui copii ale acestui program în conformitate cu termenii licen
     <value>Adăugați un bloc de semnături XML. (Toate fluxurile la distanță trebuie semnate.)</value>
     <comment>Automatically translated.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Mod de funcționare necunoscut.
-Încercați {0}</value>
-    <comment>Automatically translated.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>Utilizare:</value>
     <comment>Automatically translated.</comment>

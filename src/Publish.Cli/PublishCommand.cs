@@ -22,8 +22,32 @@ public sealed class PublishCommand : ICommand
     /// <summary>The file to store the aggregated <see cref="Catalog"/> data in.</summary>
     private string? _catalogFile;
 
+    /// <summary>Create feed file if non-existent.</summary>
+    private bool _create;
+
+    /// <summary>Open feed in text editor.</summary>
+    private bool _edit;
+
     /// <summary>Download missing archives, calculate manifest digests, etc..</summary>
     private bool _addMissing;
+
+    /// <summary>Add <see cref="Implementation"/>s from other feeds.</summary>
+    private readonly List<FileInfo> _addFromFeeds = new();
+
+    /// <summary>Add a new <see cref="Implementation"/>.</summary>
+    private bool _newImplementation;
+
+    /// <summary>Modify existing <see cref="Implementation"/>(s) with the specified version.</summary>
+    private ImplementationVersion? _selectVersion;
+
+    /// <summary>Set the <see cref="Feed.Uri"/>.</summary>
+    private FeedUri? _interfaceUri;
+
+    /// <summary>Values for the implementation(s) to add/modify.</summary>
+    private Implementation? _implementation;
+
+    /// <summary>Values for an archive to add to the implementation.</summary>
+    private Archive? _archive;
 
     /// <summary>Add XML signature blocks to the feed.</summary>
     private bool _xmlSign;
@@ -50,17 +74,25 @@ public sealed class PublishCommand : ICommand
 
         var additionalArgs = BuildOptions().Parse(args ?? throw new ArgumentNullException(nameof(args)));
 
-        try
+        if (_create)
         {
-            _feeds = Paths.ResolveFiles(additionalArgs, "*.xml");
+            if (additionalArgs.Count != 1) throw new OptionException(Resources.MissingArguments, "feed");
+            _feeds = new List<FileInfo> {new(additionalArgs[0])};
         }
-        #region Error handling
-        catch (FileNotFoundException ex)
+        else
         {
-            // Report as an invalid command-line argument
-            throw new OptionException(ex.Message, ex.FileName);
+            try
+            {
+                _feeds = Paths.ResolveFiles(additionalArgs, "*.xml");
+            }
+            #region Error handling
+            catch (FileNotFoundException ex)
+            {
+                // Report as an invalid command-line argument
+                throw new OptionException(ex.Message, ex.FileName);
+            }
+            #endregion
         }
-        #endregion
     }
 
     private OptionSet BuildOptions()
@@ -78,7 +110,25 @@ public sealed class PublishCommand : ICommand
 
             // Modes
             {"catalog=", () => Resources.OptionCatalog, path => _catalogFile = Path.GetFullPath(path)},
+            {"c|create", () => Resources.OptionCreate, _ => _create = true},
+            {"e|edit", () => "Open feed in text editor.", _ => _edit = true},
             {"add-missing", () => Resources.OptionAddMissing, _ => _addMissing = true},
+            {"a|add-from=", () => "Add implementations from {FEED}.", path => _addFromFeeds.AddRange(Paths.ResolveFiles(new[] {path}, "*.xml"))},
+            {"add-version=", () => "Add a new implementation with the specified {VERSION}. Combine with --set-* options.", (ImplementationVersion version) => { _newImplementation = true; (_implementation ??= new()).Version = version; }},
+            {"select-version=", () => "Modify existing implementation(s) with the specified {VERSION}. Combine with --set-* options.", (ImplementationVersion version) => _selectVersion = version},
+
+            // Modifications
+            {"set-interface-uri=", () => "Set the feed's interface {URI}.", (FeedUri uri) => _interfaceUri = uri},
+            {"set-id=", () => "Set the implementation's {ID}.", id => (_implementation ??= new()).ID = id},
+            {"set-main=", () => "Set the implementation's {MAIN} executable.", main => (_implementation ??= new()).Main = main},
+            {"set-arch=", () => "Set the implementation's {ARCHITECTURE}.", (Architecture architecture) => (_implementation ??= new()).Architecture = architecture},
+            {"set-released=", () => "Set the implementation's {RELEASED} date.", (DateTime released) => (_implementation ??= new()).Released = released},
+            {"set-stability=", () => "Set the implementation's {STABILITY}", (Stability stability) => (_implementation ??= new()).Stability = stability},
+            {"set-version=", () => "Set the implementation's {VERSION}.", (ImplementationVersion version) => (_implementation ??= new()).Version = version},
+
+            // Archives
+            {"archive-url=", () => "Add an archive with the specified {URL}.", (Uri url) => (_archive ??= new()).Href = url},
+            {"archive-extract=", () => "Specify the {DIRECTORY} inside the archive to extract.", directory => (_archive ??= new()).Extract = directory},
 
             // Signatures
             {"x|xmlsign", () => Resources.OptionXmlSign, _ => _xmlSign = true},
@@ -122,7 +172,9 @@ public sealed class PublishCommand : ICommand
 
         foreach (var file in _feeds)
         {
-            var feedEditing = FeedEditing.Load(file.FullName);
+            var feedEditing = _create && !file.Exists
+                ? new FeedEditing(new(new() {Name = file.Name, Summaries = {"summary"}}))
+                : FeedEditing.Load(file.FullName);
             var feed = feedEditing.SignedFeed.Feed;
             feed.ResolveInternalReferences();
 
@@ -209,7 +261,7 @@ public sealed class PublishCommand : ICommand
         if (!_xmlSign && !_unsign && !feedEditing.UnsavedChanges) return;
 
         PromptPassphrase(
-            () => feedEditing.SignedFeed.Save(feedEditing.Path!, _openPgpPassphrase),
+            () => feedEditing.SignedFeed.Save(feedEditing.Path ?? _feeds.First().FullName, _openPgpPassphrase),
             feedEditing.SignedFeed.SecretKey);
     }
 

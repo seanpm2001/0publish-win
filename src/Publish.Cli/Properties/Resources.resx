@@ -139,6 +139,9 @@ You may redistribute copies of this program under the terms of the GNU Lesser Ge
   <data name="OptionCatalog" xml:space="preserve">
     <value>Combine all specified feeds into a single catalog {FILE}.</value>
   </data>
+  <data name="OptionCreate" xml:space="preserve">
+    <value>Create feed file if non-existent.</value>
+  </data>
   <data name="OptionGnuPGPassphrase" xml:space="preserve">
     <value>Use {PASS} to unlock the GnuPG secret key.</value>
   </data>
@@ -159,10 +162,6 @@ You may redistribute copies of this program under the terms of the GNU Lesser Ge
   </data>
   <data name="OptionXmlSign" xml:space="preserve">
     <value>Add an XML signature block. (All remote feeds must be signed.)</value>
-  </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Unknown operation mode.
-Try {0}</value>
   </data>
   <data name="Usage" xml:space="preserve">
     <value>Usage:</value>

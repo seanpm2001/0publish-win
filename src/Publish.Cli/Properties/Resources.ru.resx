@@ -115,11 +115,6 @@
     <value>Добавьте блок XML-подписи. (Все удаленные каналы должны быть подписаны)</value>
     <comment>Automatically translated.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Неизвестный режим работы.
-Попробуйте {0}</value>
-    <comment>Automatically translated.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>Использование:</value>
     <comment>Automatically translated.</comment>

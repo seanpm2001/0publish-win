@@ -115,11 +115,6 @@ Vous pouvez redistribuer des copies de ce programme suivant les termes de la “
     <value>Ajoutez un bloc de signature XML. (Tous les flux distants doivent être signés)</value>
     <comment>Automatically translated.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Mode de fonctionnement inconnu.
-Essayez {0}</value>
-    <comment>Automatically translated.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>Usage:</value>
     <comment>Manually overriden.</comment>

@@ -115,11 +115,6 @@ Puede redistribuir copias de este programa bajo los términos de la Licencia Pú
     <value>Añadir un bloque de firma XML. (Todos los feeds remotos deben estar firmados)</value>
     <comment>Automatically translated.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Modo de funcionamiento desconocido.
-Pruebe con {0}</value>
-    <comment>Automatically translated.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>Uso:</value>
     <comment>Automatically translated.</comment>

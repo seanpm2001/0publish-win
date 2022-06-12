@@ -115,11 +115,6 @@ U mag kopieën van dit programma verspreiden onder de voorwaarden van de GNU Les
     <value>Voeg een XML handtekening blok toe. (Alle feeds op afstand moeten worden ondertekend)</value>
     <comment>Automatically translated.</comment>
   </data>
-  <data name="UnknownMode" xml:space="preserve">
-    <value>Onbekende werkingsmodus.
-Probeer {0}</value>
-    <comment>Automatically translated.</comment>
-  </data>
   <data name="Usage" xml:space="preserve">
     <value>Gebruik:</value>
     <comment>Automatically translated.</comment>

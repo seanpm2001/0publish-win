@@ -125,6 +125,15 @@ namespace ZeroInstall.Publish.Cli.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create feed file if non-existent..
+        /// </summary>
+        internal static string OptionCreate {
+            get {
+                return ResourceManager.GetString("OptionCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use {PASS} to unlock the GnuPG secret key..
         /// </summary>
         internal static string OptionGnuPGPassphrase {
@@ -184,16 +193,6 @@ namespace ZeroInstall.Publish.Cli.Properties {
         internal static string OptionXmlSign {
             get {
                 return ResourceManager.GetString("OptionXmlSign", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unknown operation mode.
-        ///Try {0} --help.
-        /// </summary>
-        internal static string UnknownMode {
-            get {
-                return ResourceManager.GetString("UnknownMode", resourceCulture);
             }
         }
         
