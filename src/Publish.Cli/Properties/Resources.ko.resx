@@ -80,15 +80,15 @@
     <comment>Automatically translated.</comment>
   </data>
   <data name="OptionAddMissing" xml:space="preserve">
-    <value>누락된 아카이브 다운로드, 적하목록 다이제스트 계산 등을 할 수 있습니다.</value>
+    <value>누락된 아카이브 다운로드, 적하목록 요약 계산 등...</value>
     <comment>Automatically translated.</comment>
   </data>
   <data name="OptionCatalog" xml:space="preserve">
-    <value>지정된 모든 피드를 단일 카탈로그에 결합 {FILE}.</value>
+    <value>지정된 모든 피드를 단일 카탈로그로 결합 {FILE}.</value>
     <comment>Automatically translated.</comment>
   </data>
   <data name="OptionGnuPGPassphrase" xml:space="preserve">
-    <value>{PASS} 을 사용하여 GnuPG 비밀 키를 잠금 해제합니다.</value>
+    <value>{PASS} 을 사용하여 GnuPG 비밀키를 잠금 해제합니다.</value>
     <comment>Automatically translated.</comment>
   </data>
   <data name="OptionHelp" xml:space="preserve">
@@ -96,7 +96,7 @@
     <comment>Automatically translated.</comment>
   </data>
   <data name="OptionKey" xml:space="preserve">
-    <value>서명에 사용할 키(두 개 이상의 키가 있거나 다른 키로 서명하려는 경우).</value>
+    <value>서명에 사용할 키(두 개 이상의 키가 있거나 다른 키로 서명하려는 경우)를 입력합니다.</value>
     <comment>Automatically translated.</comment>
   </data>
   <data name="Options" xml:space="preserve">
@@ -116,7 +116,7 @@
     <comment>Automatically translated.</comment>
   </data>
   <data name="UnknownMode" xml:space="preserve">
-    <value>알 수 없는 작동 모드.
+    <value>알 수 없는 작동 모드입니다.
 시도 {0}</value>
     <comment>Automatically translated.</comment>
   </data>

@@ -112,7 +112,7 @@ Anda dapat menyebarluaskan salinan program ini di bawah ketentuan Lisensi Publik
     <comment>Automatically translated.</comment>
   </data>
   <data name="OptionXmlSign" xml:space="preserve">
-    <value>Tambahkan blok tanda tangan XML. (Semua feed jarak jauh harus ditandatangani.)</value>
+    <value>Tambahkan blok tanda tangan XML. (Semua umpan jarak jauh harus ditandatangani.)</value>
     <comment>Automatically translated.</comment>
   </data>
   <data name="UnknownMode" xml:space="preserve">

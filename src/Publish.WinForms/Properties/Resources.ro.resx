@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddMissing" xml:space="preserve">
-    <value>Adăugați lipsă</value>
+    <value>Adaugă lipsă</value>
     <comment>Automatically translated.</comment>
   </data>
   <data name="AllFiles" xml:space="preserve">
@@ -103,7 +103,7 @@ Implementarea trebuia să rămână aceeași</value>
     <comment>Automatically translated.</comment>
   </data>
   <data name="DigestMismatch" xml:space="preserve">
-    <value>Se modifică rezumatul manifestului. Doriți să îl înlocuiți pe cel existent?</value>
+    <value>S-a schimbat rezumatul manifestului. Doriți să îl înlocuiți pe cel existent?</value>
     <comment>Automatically translated.</comment>
   </data>
   <data name="DigestOtherImplementations" xml:space="preserve">

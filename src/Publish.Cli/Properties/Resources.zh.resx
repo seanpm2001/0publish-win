@@ -76,7 +76,7 @@
     <comment>Automatically translated.</comment>
   </data>
   <data name="NoFeedFilesFound" xml:space="preserve">
-    <value>无法找到匹配的饲料文件。</value>
+    <value>无法找到任何匹配的饲料文件。</value>
     <comment>Automatically translated.</comment>
   </data>
   <data name="OptionAddMissing" xml:space="preserve">
